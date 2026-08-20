@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Moved to Orrery</title>
+<link rel="canonical" href="https://mhsenkow.github.io/orrery/">
+<script>
+(function () {
+  var base = "https://mhsenkow.github.io/orrery/";
+  var path = location.pathname.replace(/^\/simearth\/?/, "");
+  var target = base + path + location.search + location.hash;
+  location.replace(target);
+})();
+</script>
+<meta http-equiv="refresh" content="0;url=https://mhsenkow.github.io/orrery/">
+</head>
+<body style="margin:0;min-height:100vh;display:grid;place-items:center;background:#05060a;color:#dfe6f2;font:15px/1.5 ui-sans-serif,system-ui,sans-serif">
+<p>This project is now <strong>Orrery</strong>. <a id="go" href="https://mhsenkow.github.io/orrery/" style="color:#9ec5ff">Continue</a></p>
+<script>
+(function () {
+  var path = location.pathname.replace(/^\/simearth\/?/, "");
+  document.getElementById("go").href =
+    "https://mhsenkow.github.io/orrery/" + path + location.search + location.hash;
+})();
+</script>
+</body>
+</html>
