@@ -9,19 +9,19 @@
 (function () {
   var base = "https://mhsenkow.github.io/orrery/";
   var path = location.pathname.replace(/^\/simearth\/?/, "");
-  var target = base + path + location.search + location.hash;
-  location.replace(target);
+  location.replace(base + path + location.search + location.hash);
 })();
 </script>
-<meta http-equiv="refresh" content="0;url=https://mhsenkow.github.io/orrery/">
 </head>
 <body style="margin:0;min-height:100vh;display:grid;place-items:center;background:#05060a;color:#dfe6f2;font:15px/1.5 ui-sans-serif,system-ui,sans-serif">
-<p>This project is now <strong>Orrery</strong>. <a id="go" href="https://mhsenkow.github.io/orrery/" style="color:#9ec5ff">Continue</a></p>
+<p>This project is now <strong>Orrery</strong>. <a id="go" href="https://mhsenkow.github.io/orrery/">Continue</a></p>
 <script>
 (function () {
   var path = location.pathname.replace(/^\/simearth\/?/, "");
-  document.getElementById("go").href =
-    "https://mhsenkow.github.io/orrery/" + path + location.search + location.hash;
+  var href = "https://mhsenkow.github.io/orrery/" + path + location.search + location.hash;
+  document.getElementById("go").href = href;
+  // Fallback if script above failed to navigate.
+  setTimeout(function () { location.replace(href); }, 50);
 })();
 </script>
 </body>
